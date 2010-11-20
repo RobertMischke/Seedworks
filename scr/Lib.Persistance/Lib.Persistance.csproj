@@ -31,6 +31,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\..\lib\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\..\lib\NHibernate.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,7 +46,60 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Persistance.NHibernate\ISessionManager.cs" />
+    <Compile Include="Persistance.NHibernate\Logging\NHibernateLogger.cs" />
+    <Compile Include="Persistance.NHibernate\NHibernateHelperSF.cs" />
+    <Compile Include="Persistance.NHibernate\RepositoryDb.cs" />
+    <Compile Include="Persistance.NHibernate\SessionExtensions.cs" />
+    <Compile Include="Persistance.NHibernate\SessionFactoryContainer.cs" />
+    <Compile Include="Persistance.NHibernate\SessionManager.cs" />
+    <Compile Include="Persistence.Query\Condition\CategoryAttributes.cs" />
+    <Compile Include="Persistence.Query\Condition\Condition.cs" />
+    <Compile Include="Persistence.Query\Condition\ConditionComparisonType.cs" />
+    <Compile Include="Persistence.Query\Condition\ConditionContainer.cs" />
+    <Compile Include="Persistence.Query\Condition\ConditionNumericAbstract.cs" />
+    <Compile Include="Persistence.Query\Condition\FilterAttributes.cs" />
+    <Compile Include="Persistence.Query\Condition\FilterCodeGenerator.cs" />
+    <Compile Include="Persistence.Query\Condition\IConditionNumeric.cs" />
+    <Compile Include="Persistence.Query\Condition\Types\ConditionAvgAggregate.cs" />
+    <Compile Include="Persistence.Query\Condition\Types\ConditionBoolean.cs" />
+    <Compile Include="Persistence.Query\Condition\Types\ConditionConjunction.cs" />
+    <Compile Include="Persistence.Query\Condition\Types\ConditionDateTime.cs" />
+    <Compile Include="Persistence.Query\Condition\Types\ConditionDecimal.cs" />
+    <Compile Include="Persistence.Query\Condition\Types\ConditionDisjunction.cs" />
+    <Compile Include="Persistence.Query\Condition\Types\ConditionDouble.cs" />
+    <Compile Include="Persistence.Query\Condition\Types\ConditionHasAffiliateLink.cs" />
+    <Compile Include="Persistence.Query\Condition\Types\ConditionInteger.cs" />
+    <Compile Include="Persistence.Query\Condition\Types\ConditionList.cs" />
+    <Compile Include="Persistence.Query\Condition\Types\ConditionObject.cs" />
+    <Compile Include="Persistence.Query\Condition\Types\ConditionSingle.cs" />
+    <Compile Include="Persistence.Query\Condition\Types\ConditionString.cs" />
+    <Compile Include="Persistence.Query\Condition\Types\ConditionSubquery.cs" />
+    <Compile Include="Persistence.Query\Condition\Types\ConditionTextSearch.cs" />
+    <Compile Include="Persistence.Query\Condition\Types\CondtionEnum.cs" />
+    <Compile Include="Persistence.Query\ISearchDesc.cs" />
+    <Compile Include="Persistence.Query\OrderBy\OrderBy.cs" />
+    <Compile Include="Persistence.Query\OrderBy\OrderByCriteria.cs" />
+    <Compile Include="Persistence.Query\OrderBy\OrderDirection.cs" />
+    <Compile Include="Persistence.Query\Pager\IPager.cs" />
+    <Compile Include="Persistence.Query\Pager\Pager.cs" />
+    <Compile Include="Persistence.Query\Projections.cs" />
+    <Compile Include="Persistence.Query\QueryBatcher.cs" />
+    <Compile Include="Persistence.Query\SearchDescriptionBase.cs" />
+    <Compile Include="Persistence.Setup\BaseSetup.cs" />
+    <Compile Include="Persistence\Interfaces\IDataService.cs" />
+    <Compile Include="Persistence\Interfaces\IDeletable.cs" />
+    <Compile Include="Persistence\Interfaces\IMutablePersistable.cs" />
+    <Compile Include="Persistence\Interfaces\IPersistable.cs" />
+    <Compile Include="Persistence\PersistableList.cs" />
+    <Compile Include="Persistence\TypeExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Lib\Lib.csproj">
+      <Project>{5EF45459-ECF8-456E-99CE-76060ED17E3D}</Project>
+      <Name>Lib</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
