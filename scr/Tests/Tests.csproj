@@ -68,6 +68,7 @@
   <ItemGroup>
     <Compile Include="Lib.Persistance\Sample\Entity\SampleEntity.cs" />
     <Compile Include="Lib.Persistance\Sample\Entity\SampleEntityList.cs" />
+    <Compile Include="Lib.Persistance\Sample\Entity\SampleEntityMap.cs" />
     <Compile Include="Lib.Persistance\Sample\Entity\SampleEntityRepository.cs" />
     <Compile Include="Lib.Persistance\Sample\Entity\SampleEntityService.cs" />
     <Compile Include="Lib.Persistance\SampleEntityRepositoryTests.cs" />

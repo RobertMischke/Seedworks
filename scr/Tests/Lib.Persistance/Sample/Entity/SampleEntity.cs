@@ -6,12 +6,12 @@ using Seedworks.Lib.Persistance;
 
 namespace Seedworkds.Tests.Lib.Persistance
 {
-    public class SampleEntity :  IMutablePersistable
+    public class SampleEntity : IMutablePersistable
     {
-        public int Id { get; set; }
-        public string Name;
+        virtual public int Id { get; set; }
+        virtual public string Name { get; set; }
 
-        public DateTime DateCreated { get; set; }
-        public DateTime DateModified { get; set; }
+        virtual public DateTime DateCreated { get; set; }
+        virtual public DateTime DateModified { get; set; }
     }
 }
