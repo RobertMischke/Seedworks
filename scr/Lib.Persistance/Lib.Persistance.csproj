@@ -52,7 +52,6 @@
     <Compile Include="Persistance.NHibernate\RepositoryDb.cs" />
     <Compile Include="Persistance.NHibernate\SessionExtensions.cs" />
     <Compile Include="Persistance.NHibernate\SessionFactoryContainer.cs" />
-    <Compile Include="Persistance.NHibernate\SessionManager.cs" />
     <Compile Include="Persistence.Query\Condition\CategoryAttributes.cs" />
     <Compile Include="Persistence.Query\Condition\Condition.cs" />
     <Compile Include="Persistence.Query\Condition\ConditionComparisonType.cs" />

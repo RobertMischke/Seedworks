@@ -66,6 +66,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Lib.Persistance\SampleEntityFilterTests.cs" />
     <Compile Include="Lib.Persistance\Sample\Entity\SampleEntity.cs" />
     <Compile Include="Lib.Persistance\Sample\Entity\SampleEntityList.cs" />
     <Compile Include="Lib.Persistance\Sample\Entity\SampleEntityMap.cs" />
