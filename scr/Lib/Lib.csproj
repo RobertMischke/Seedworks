@@ -8,8 +8,8 @@
     <ProjectGuid>{5EF45459-ECF8-456E-99CE-76060ED17E3D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Lib</RootNamespace>
-    <AssemblyName>Lib</AssemblyName>
+    <RootNamespace>Seedworks.Lib</RootNamespace>
+    <AssemblyName>Seedworks.Lib</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,7 +41,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ExtensionMethods\CollectionExtensions.cs" />
-    <Compile Include="ExtensionMethods\StringExtensions.cs" />
+    <Compile Include="ExtensionMethods\StringExtensions.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
