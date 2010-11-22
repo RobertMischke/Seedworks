@@ -8,10 +8,10 @@ namespace Seedworkds.Tests.Lib.Persistance
 {
     public class SampleEntity : IMutablePersistable
     {
-        virtual public int Id { get; set; }
-        virtual public string Name { get; set; }
+        public virtual int Id { get; set; }
+        public virtual string Name { get; set; }
 
-        virtual public DateTime DateCreated { get; set; }
-        virtual public DateTime DateModified { get; set; }
+        public virtual DateTime DateCreated { get; set; }
+        public virtual DateTime DateModified { get; set; }
     }
 }
