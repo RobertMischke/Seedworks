@@ -12,9 +12,8 @@ namespace Seedworkds.Tests.Lib.Persistance
     public class SampleEntityBaseTest
     {
         protected IContainer _container;
-        [SetUp]
 
-        public void SetUp()
+        public void InitializeContext()
         {            
             var builder = new ContainerBuilder();
             builder.RegisterType<SampleEntityService>();

@@ -7,11 +7,26 @@ namespace Seedworkds.Tests.Lib.Persistance
 {
     public class SampleEntityService
     {
-        private readonly SampleEntityRepository _sampleEntityRepository;
+        private readonly SampleEntityRepository _repository;
 
-        public SampleEntityService(SampleEntityRepository sampleEntityRepository)
+        public SampleEntityService(SampleEntityRepository repository)
         {
-            _sampleEntityRepository = sampleEntityRepository;
+            _repository = repository;
+        }
+
+        public void Create(SampleEntity someEntity)
+        {
+            _repository.Create(someEntity);
+        }
+
+        public void Delete(SampleEntity someEntity)
+        {
+            _repository.Delete(someEntity);
+        }
+
+        public SampleEntityList GetAll()
+        {
+            return _repository.GetAll();
         }
     }
 }
