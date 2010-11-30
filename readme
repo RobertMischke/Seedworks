@@ -1,4 +1,4 @@
-The Software is based on “Speak-Lib” developed by a company I founded in early 2007 which deceased in 2010. The initial idea was to create libraries, which could be shared between projects. Very early Franz Richard and I developed the generic repository and the foundations for web state abstraction (Session and Cache). 
+The Software is based on 'Speak-Lib' developed by a company I founded in early 2007, which deceased in 2010. The initial idea was to create libraries, to be shared between projects. Very early Franz Richard and I developed the generic repository and the foundations for web state abstraction (Session and Cache). 
 The current version is stripped down to the essentials and regrouped. 
 
 A version of the library based on the original source can be found here: https://github.com/teamaton/speak-lib
