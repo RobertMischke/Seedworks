@@ -5,8 +5,7 @@ using System.Text;
 
 namespace Seedworks.Lib.Persistance
 {
-    public interface WithNonPhysicalDeletion 
+    public interface IUser
     {
-		bool Deleted { get; set; }
     }
 }

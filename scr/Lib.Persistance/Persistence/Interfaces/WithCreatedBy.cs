@@ -5,7 +5,9 @@ using System.Text;
 
 namespace Seedworks.Lib.Persistance
 {
-    public interface WithUser
+    public interface WithCreatedBy
     {
+        IUser CreatedBy { get; set; }
+    
     }
 }

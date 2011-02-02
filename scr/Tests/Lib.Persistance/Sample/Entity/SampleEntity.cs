@@ -6,7 +6,7 @@ using Seedworks.Lib.Persistance;
 
 namespace Seedworkds.Tests.Lib.Persistance
 {
-    public class SampleEntity : WithDateCreated
+    public class SampleEntity : IPersistable, WithDateCreated
     {
         public virtual int Id { get; set; }
         public virtual string Name { get; set; }
