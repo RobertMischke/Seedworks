@@ -87,9 +87,11 @@
     <Compile Include="Persistence.Query\SearchDescriptionBase.cs" />
     <Compile Include="Persistence.Setup\BaseSetup.cs" />
     <Compile Include="Persistence\Interfaces\IDataService.cs" />
-    <Compile Include="Persistence\Interfaces\IDeletable.cs" />
-    <Compile Include="Persistence\Interfaces\IMutablePersistable.cs" />
+    <Compile Include="Persistence\Interfaces\WithNonPhysicalDeletion.cs" />
+    <Compile Include="Persistence\Interfaces\WithDateCreated.cs" />
     <Compile Include="Persistence\Interfaces\IPersistable.cs" />
+    <Compile Include="Persistence\Interfaces\WithUser.cs" />
+    <Compile Include="Persistence\Interfaces\WithVersion.cs" />
     <Compile Include="Persistence\PersistableList.cs" />
     <Compile Include="Persistence\TypeExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

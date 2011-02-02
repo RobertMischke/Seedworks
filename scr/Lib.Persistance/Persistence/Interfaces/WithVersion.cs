@@ -5,8 +5,7 @@ using System.Text;
 
 namespace Seedworks.Lib.Persistance
 {
-    public interface IDeletable 
+    public interface WithVersion
     {
-		bool Deleted { get; set; }
     }
 }
