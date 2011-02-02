@@ -13,6 +13,12 @@ namespace Seedworkds.Tests.Lib.Persistance
     {
         protected IContainer _container;
 
+        [SetUp]
+        public void Setup()
+        {
+            InitializeContext();
+        }
+
         public void InitializeContext()
         {            
             var builder = new ContainerBuilder();
