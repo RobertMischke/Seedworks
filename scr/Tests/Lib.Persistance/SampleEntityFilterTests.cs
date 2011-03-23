@@ -30,6 +30,17 @@ namespace Seedworkds.Tests.Lib.Persistance
             Assert.That(Resolve<SampleEntityRepository>().GetBy(searchSpec).Count, Is.EqualTo(1));
         }
 
-        
+        [Test]
+        public void Should_return_unique_item_or_none()
+        {
+            Arrange_persisted_sample_entities();
+
+            var searchSpec = new SampleEntitySearchSpec();
+            searchSpec.Filter.Name.EqualTo("Tom");
+
+            Assert.That(Resolve<SampleEntityRepository>().GetByUnique(searchSpec), Is.Not.Null);
+        }
+
+
     }
 }

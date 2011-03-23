@@ -8,7 +8,7 @@ using NHibernate.Criterion;
 namespace Seedworks.Lib.Persistance
 {
     public abstract class RepositoryDb<TDomainObject, TDomainObjectList>
-        where TDomainObject : IPersistable
+        where TDomainObject : class, IPersistable
         where TDomainObjectList : PersistableList<TDomainObject>, new()
     {
         protected readonly ISession _session;
@@ -211,30 +211,48 @@ namespace Seedworks.Lib.Persistance
             return list;
         }
 
-		public virtual TDomainObjectList GetBy(ISearchDesc searchDesc)
+		public virtual TDomainObjectList GetBy(ISearchDesc searchSpec)
 		{
-			return GetBy(searchDesc, null);
+			return GetBy(searchSpec, null);
 		}
+
+        /// <summary>
+        /// Caution: If the result has more than one result, 
+        /// an exeption geths thrown.
+        /// </summary>
+        public TDomainObject GetByUnique(ISearchDesc searchSpec)
+        {
+            var result = GetBy(searchSpec, null);
+
+            if (result.Count > 1)
+                throw new Exception("");
+
+            if (result.Count == 1)
+                return result[0];
+
+            return null;
+        }
+
 
 		/// <summary>
 		/// 
 		/// </summary>
-		/// <param name="searchDesc"></param>
+		/// <param name="searchSpec"></param>
 		/// <param name="criteriaExtender">Here you can plug in additional changes of the criteria.</param>
 		/// <returns></returns>
-        public TDomainObjectList GetBy(ISearchDesc searchDesc, Action<ICriteria> criteriaExtender)
+        public TDomainObjectList GetBy(ISearchDesc searchSpec, Action<ICriteria> criteriaExtender)
         {
             var criteria = GetExecutableCriteria();
 
-            AddGenericConditions(criteria, searchDesc.Filter);
-            AddOrderBy(criteria, searchDesc.OrderBy);
+            AddGenericConditions(criteria, searchSpec.Filter);
+            AddOrderBy(criteria, searchSpec.OrderBy);
 
 			if (criteriaExtender != null)
 				criteriaExtender.Invoke(criteria);
 
 			var totalCountCriteria = CriteriaTransformer.TransformToRowCount(criteria);
 
-            SetPager(criteria, searchDesc);
+            SetPager(criteria, searchSpec);
 
 			// Use MultiCriteria to reduce DB roundtrips.
 			var multiCriteria = _session
@@ -264,7 +282,7 @@ namespace Seedworks.Lib.Persistance
             var list = new TDomainObjectList();
 			list.AddRange(((IList)multiResult[0]).Cast<TDomainObject>());
 
-			searchDesc.TotalItems = (int) ((IList) multiResult[1])[0];
+			searchSpec.TotalItems = (int) ((IList) multiResult[1])[0];
 
             if (AfterItemListRetrieved != null)
                 AfterItemListRetrieved(this, new TDomainObjectListArgs(list));

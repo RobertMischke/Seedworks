@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Seedworks.Lib.Persistance
 {
-    public interface IPersistable
+    public interface IPersistable 
     {
         int Id { get; set; }
 
