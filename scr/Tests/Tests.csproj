@@ -72,7 +72,7 @@
     <Compile Include="Lib.Persistance\Sample\Entity\SampleEntityList.cs" />
     <Compile Include="Lib.Persistance\Sample\Entity\SampleEntityMap.cs" />
     <Compile Include="Lib.Persistance\Sample\Entity\SampleEntityRepository.cs" />
-    <Compile Include="Lib.Persistance\Sample\Entity\SampleEntitySearchDesc.cs" />
+    <Compile Include="Lib.Persistance\Sample\Entity\SampleEntitySearchSpec.cs" />
     <Compile Include="Lib.Persistance\Sample\Entity\SampleEntityService.cs" />
     <Compile Include="Lib.Persistance\SampleEntityRepositoryTests.cs" />
     <Compile Include="Lib.Persistance\Sample\Infrastructure\SessionFactory.cs" />

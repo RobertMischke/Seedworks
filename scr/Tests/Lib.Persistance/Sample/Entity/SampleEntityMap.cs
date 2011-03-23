@@ -16,4 +16,4 @@ namespace Seedworkds.Tests.Lib.Persistance
             Map(x => x.DateModified);
         }
     }
-}
+}   
