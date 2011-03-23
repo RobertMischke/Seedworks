@@ -6,7 +6,7 @@ using Seedworks.Lib.Persistance;
 
 namespace Seedworkds.Tests.Lib.Persistance
 {
-    public class SampleEntitySearchSpec : SearchSpecBase<SampleEntityFilter, OrderByCriteria>{}
+    public class SampleEntitySearchSpec : SearchSpecificationBase<SampleEntityFilter, OrderByCriteria>{}
 
     public class SampleEntityFilter : ConditionContainer
     {

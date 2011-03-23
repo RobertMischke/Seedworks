@@ -11,7 +11,7 @@ namespace Seedworks.Lib.Persistance
     /// <typeparam name="TFilter"></typeparam>
     /// <typeparam name="TOrderBy"></typeparam>
     [Serializable]
-    public class SearchSpecBase<TFilter, TOrderBy> : Pager, ISearchDesc
+    public class SearchSpecificationBase<TFilter, TOrderBy> : Pager, ISearchDesc
         where TFilter : ConditionContainer, new()
         where TOrderBy : OrderByCriteria, new()
     {

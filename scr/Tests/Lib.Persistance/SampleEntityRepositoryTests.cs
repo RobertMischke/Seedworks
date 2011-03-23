@@ -15,7 +15,6 @@ namespace Seedworkds.Tests.Lib.Persistance
         {
             var entityRepository = _container.Resolve<SampleEntityRepository>();
             entityRepository.Create(new SampleEntity());
-            entityRepository.Flush();
 
             Assert.That(entityRepository.GetAll().Count, Is.EqualTo(1));
         }
