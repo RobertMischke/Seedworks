@@ -2,7 +2,7 @@ using System;
 
 namespace Seedworks.Lib.Persistance
 {
-    public interface IMutablePersistable : IPersistable
+    public interface WithDateCreated 
     {
         DateTime DateModified { get; set; }
     }
