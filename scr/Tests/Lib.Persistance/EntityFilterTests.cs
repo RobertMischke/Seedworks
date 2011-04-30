@@ -7,7 +7,7 @@ using NUnit.Framework;
 namespace Seedworkds.Tests.Lib.Persistance
 {
     [TestFixture]
-    public class SampleEntityFilterTests : SampleEntityBaseTest
+    public class EntityFilterTests : SampleEntityBaseTest
     {
 
         public void Should_filter_entities()

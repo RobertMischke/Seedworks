@@ -8,7 +8,7 @@ using NHibernate.Criterion;
 namespace Seedworks.Lib.Persistance
 {
     public abstract class RepositoryDb<TDomainObject, TDomainObjectList>
-        where TDomainObject : IPersistable
+        where TDomainObject : IPersistable, new()
         where TDomainObjectList : PersistableList<TDomainObject>, new()
     {
         protected readonly ISession _session;
@@ -216,13 +216,12 @@ namespace Seedworks.Lib.Persistance
 			return GetBy(searchDesc, null);
 		}
 
-		/// <summary>
-		/// 
-		/// </summary>
+
 		/// <param name="searchDesc"></param>
 		/// <param name="criteriaExtender">Here you can plug in additional changes of the criteria.</param>
 		/// <returns></returns>
-        public TDomainObjectList GetBy(ISearchDesc searchDesc, Action<ICriteria> criteriaExtender)
+        public TDomainObjectList GetBy(ISearchDesc searchDesc, 
+                                       Action<ICriteria> criteriaExtender)
         {
             var criteria = GetExecutableCriteria();
 
@@ -265,6 +264,22 @@ namespace Seedworks.Lib.Persistance
                 AfterItemListRetrieved(this, new TDomainObjectListArgs(list));
 
             return list;
+        }
+
+        public TDomainObject GetByUnique(ISearchDesc searchDesc)
+        {
+            var criteria = GetExecutableCriteria();
+            AddGenericConditions(criteria, searchDesc.Filter);
+
+            var result = criteria.List<TDomainObject>();
+
+            if (result.Count > 1)
+                throw new Exception("An empty or single result is expected, but result count was: " + result.Count);
+
+            if(result.Count == 1)
+                return result[0];
+
+            return default(TDomainObject);
         }
 
         public void Flush()

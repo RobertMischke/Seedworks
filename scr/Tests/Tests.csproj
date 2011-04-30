@@ -66,15 +66,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Lib.Persistance\SampleEntityFilterTests.cs" />
-    <Compile Include="Lib.Persistance\SampleEntityServiceTests.cs" />
+    <Compile Include="Lib.Persistance\RepositoryGetBySingleTests.cs" />
+    <Compile Include="Lib.Persistance\EntityFilterTests.cs" />
+    <Compile Include="Lib.Persistance\ServiceTests.cs" />
     <Compile Include="Lib.Persistance\Sample\Entity.WithDateCreated\SampleEntity.cs" />
     <Compile Include="Lib.Persistance\Sample\Entity.WithDateCreated\SampleEntityList.cs" />
     <Compile Include="Lib.Persistance\Sample\Entity.WithDateCreated\SampleEntityMap.cs" />
     <Compile Include="Lib.Persistance\Sample\Entity.WithDateCreated\SampleEntityRepository.cs" />
-    <Compile Include="Lib.Persistance\Sample\Entity.WithDateCreated\SampleEntitySearchDesc.cs" />
+    <Compile Include="Lib.Persistance\Sample\Entity.WithDateCreated\SampleEntitySearchSpec.cs" />
     <Compile Include="Lib.Persistance\Sample\Entity.WithDateCreated\SampleEntityService.cs" />
-    <Compile Include="Lib.Persistance\SampleEntityRepositoryTests.cs" />
+    <Compile Include="Lib.Persistance\RepositoryTests.cs" />
     <Compile Include="Lib.Persistance\Sample\Infrastructure\SessionFactory.cs" />
     <Compile Include="Lib.Persistance\Sample\SampleEntityBaseTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
