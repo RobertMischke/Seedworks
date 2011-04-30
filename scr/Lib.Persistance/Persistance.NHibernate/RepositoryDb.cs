@@ -241,7 +241,6 @@ namespace Seedworks.Lib.Persistance
 				.CreateMultiCriteria()
 				.Add(criteria)
 				.Add(totalCountCriteria);
-
 			IList multiResult;
 			ITransaction trans;
 

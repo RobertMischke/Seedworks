@@ -6,7 +6,7 @@ using System.Text;
 namespace Seedworks.Lib.Persistance
 {
     [Serializable]
-    public class SearchDescriptionBase<TFilter, TOrderBy> : Pager, ISearchDesc
+    public class SearchSpecificationBase<TFilter, TOrderBy> : Pager, ISearchDesc
         where TFilter : ConditionContainer, new()
         where TOrderBy : OrderByCriteria, new()
     {
