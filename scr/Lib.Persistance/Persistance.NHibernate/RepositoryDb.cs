@@ -247,11 +247,7 @@ namespace Seedworks.Lib.Persistance
 
 			try
 			{
-				using (trans = _session.BeginTransaction())
-				{
-					multiResult = multiCriteria.List();
-					trans.Commit();
-				}
+                multiResult = multiCriteria.List();
 			}
 			catch (ADOException)
 			{
