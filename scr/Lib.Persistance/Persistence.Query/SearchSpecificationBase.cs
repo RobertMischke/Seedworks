@@ -5,6 +5,11 @@ using System.Text;
 
 namespace Seedworks.Lib.Persistance
 {
+    /// <summary>
+    /// Base class for specifications
+    /// </summary>
+    /// <typeparam name="TFilter"></typeparam>
+    /// <typeparam name="TOrderBy"></typeparam>
     [Serializable]
     public class SearchSpecificationBase<TFilter, TOrderBy> : Pager, ISearchDesc
         where TFilter : ConditionContainer, new()
