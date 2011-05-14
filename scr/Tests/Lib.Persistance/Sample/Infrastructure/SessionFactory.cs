@@ -30,7 +30,7 @@ namespace Seedworkds.Tests.Lib.Persistance
 
         private static void BuildSchema(Configuration config)
         {
-            DeleteDbOnEachRun();
+             DeleteDbOnEachRun();
 
             new SchemaExport(config)
               .Create(false, true);

@@ -84,7 +84,7 @@
     <Compile Include="Persistence.Query\Pager\Pager.cs" />
     <Compile Include="Persistence.Query\Projections.cs" />
     <Compile Include="Persistence.Query\QueryBatcher.cs" />
-    <Compile Include="Persistence.Query\SearchDescriptionBase.cs" />
+    <Compile Include="Persistence.Query\SearchSpecificationBase.cs" />
     <Compile Include="Persistence.Setup\BaseSetup.cs" />
     <Compile Include="Persistence\Interfaces\IDataService.cs" />
     <Compile Include="Persistence\Interfaces\IUser.cs" />

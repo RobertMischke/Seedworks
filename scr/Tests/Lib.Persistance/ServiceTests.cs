@@ -10,7 +10,7 @@ namespace Seedworkds.Tests.Lib.Persistance
     /// <summary>
     /// Example usage 
     /// </summary>
-    public class SampleEntityServiceTests : SampleEntityBaseTest
+    public class ServiceTests : SampleEntityBaseTest
     {
         [SetUp]
         public void Setup()

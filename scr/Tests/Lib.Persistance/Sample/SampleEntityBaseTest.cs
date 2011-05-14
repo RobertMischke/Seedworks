@@ -27,5 +27,10 @@ namespace Seedworkds.Tests.Lib.Persistance
             builder.RegisterInstance(SessionFactory.CreateSessionFactory().OpenSession());
             _container = builder.Build();
         }
+
+        public T Resolve<T>()
+        {
+            return _container.Resolve<T>();
+        }
     }
 }
