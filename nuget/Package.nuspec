@@ -9,9 +9,5 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A generic Repository for NHibernate</description>
     <tags>NHibernate generic repository.</tags>
-    <dependencies>
-      <dependency id="Iesi.Collections" version="3.1.0.4000" />
-      <dependency id="NHibernate" version="3.1.0.4000" />
-    </dependencies>
   </metadata>
 </package>
