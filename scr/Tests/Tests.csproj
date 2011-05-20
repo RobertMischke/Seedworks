@@ -81,6 +81,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\AssemblyVersionAndPublisherInfo.cs">
+      <Link>Properties\AssemblyVersionAndPublisherInfo.cs</Link>
+    </Compile>
     <Compile Include="Lib.Persistance\RepositoryGetBySingleTests.cs" />
     <Compile Include="Lib.Persistance\EntityFilterTests.cs" />
     <Compile Include="Lib.Persistance\ServiceTests.cs" />
@@ -93,7 +96,6 @@
     <Compile Include="Lib.Persistance\RepositoryTests.cs" />
     <Compile Include="Lib.Persistance\Sample\Infrastructure\SessionFactory.cs" />
     <Compile Include="Lib.Persistance\Sample\SampleEntityBaseTest.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Lib.Persistance\Sample\Entity.WithUser\" />
