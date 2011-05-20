@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Seedworks.Persistance</id>
+    <version>0.8.1.34871</version>
+    <authors>Robert Mischke</authors>
+    <owners>Robert Mischke</owners>
+    <projectUrl>https://github.com/RobertMischke/Seedworks</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A generic Repository for NHibernate</description>
+    <tags>NHibernate generic repository.</tags>
+    <dependencies>
+      <dependency id="Iesi.Collections" version="3.1.0.4000" />
+      <dependency id="NHibernate" version="3.1.0.4000" />
+    </dependencies>
+  </metadata>
+</package>
