@@ -238,10 +238,9 @@ namespace Seedworks.Lib.Persistance
 			// Use MultiCriteria to reduce DB roundtrips.
 			var multiCriteria = _session
 				.CreateMultiCriteria()
-				.Add(criteria)
-				.Add(totalCountCriteria);
+				.Add("data", criteria)
+				.Add("rowCount",totalCountCriteria);
 			IList multiResult;
-			ITransaction trans;
 
 			try
 			{
