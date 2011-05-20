@@ -13,6 +13,11 @@ namespace Seedworkds.Tests.Lib.Persistance
     {
         protected IContainer _container;
 
+        static SampleEntityBaseTest()
+        {
+            HibernatingRhinos.Profiler.Appender.NHibernate.NHibernateProfiler.Initialize();
+        }
+
         [SetUp]
         public void Setup()
         {
