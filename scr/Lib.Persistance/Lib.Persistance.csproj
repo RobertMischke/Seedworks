@@ -96,7 +96,6 @@
     <Compile Include="Persistence\Interfaces\IPersistable.cs" />
     <Compile Include="Persistence\Interfaces\WithCreatedBy.cs" />
     <Compile Include="Persistence\Interfaces\WithVersion.cs" />
-    <Compile Include="Persistence\PersistableList.cs" />
     <Compile Include="Persistence\TypeExtensions.cs" />
   </ItemGroup>
   <ItemGroup>

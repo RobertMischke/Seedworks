@@ -91,7 +91,6 @@
     <Compile Include="Lib.Persistance\EntityFilterTests.cs" />
     <Compile Include="Lib.Persistance\ServiceTests.cs" />
     <Compile Include="Lib.Persistance\Sample\Entity.WithDateCreated\SampleEntity.cs" />
-    <Compile Include="Lib.Persistance\Sample\Entity.WithDateCreated\SampleEntityList.cs" />
     <Compile Include="Lib.Persistance\Sample\Entity.WithDateCreated\SampleEntityMap.cs" />
     <Compile Include="Lib.Persistance\Sample\Entity.WithDateCreated\SampleEntityRepository.cs" />
     <Compile Include="Lib.Persistance\Sample\Entity.WithDateCreated\SampleEntitySearchSpec.cs" />

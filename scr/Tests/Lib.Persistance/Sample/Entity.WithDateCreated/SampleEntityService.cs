@@ -24,7 +24,7 @@ namespace Seedworkds.Tests.Lib.Persistance
             _repository.Delete(someEntity);
         }
 
-        public SampleEntityList GetAll()
+        public IList<SampleEntity> GetAll()
         {
             return _repository.GetAll();
         }

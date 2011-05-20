@@ -7,7 +7,7 @@ using Seedworks.Lib.Persistance;
 
 namespace Seedworkds.Tests.Lib.Persistance
 {
-    public class SampleEntityRepository : RepositoryDb<SampleEntity, SampleEntityList>
+    public class SampleEntityRepository : RepositoryDb<SampleEntity>
     {
         public SampleEntityRepository(ISession session) : base(session)
         {
