@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using Seedworks.Lib.Persistance;
 
-namespace Seedworkds.Tests.Lib.Persistance
+namespace Seedworks.Tests.Lib.Persistance
 {
     public class SampleEntitySearchSpec : SearchSpecificationBase<SampleEntityFilter, OrderByCriteria>
     {

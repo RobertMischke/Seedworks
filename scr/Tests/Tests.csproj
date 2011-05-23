@@ -98,10 +98,10 @@
     <Compile Include="Lib.Persistance\RepositoryTests.cs" />
     <Compile Include="Lib.Persistance\Sample\Infrastructure\SessionFactory.cs" />
     <Compile Include="Lib.Persistance\Sample\SampleEntityBaseTest.cs" />
+    <Compile Include="Lib\AlternativeSpecImplementation.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Lib.Persistance\Sample\Entity.WithUser\" />
-    <Folder Include="Lib\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Lib.Persistance\Lib.Persistance.csproj">

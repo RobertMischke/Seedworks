@@ -5,7 +5,7 @@ using System.Text;
 using NHibernate;
 using Seedworks.Lib.Persistance;
 
-namespace Seedworkds.Tests.Lib.Persistance
+namespace Seedworks.Tests.Lib.Persistance
 {
     public class SampleEntityRepository : RepositoryDb<SampleEntity>
     {
