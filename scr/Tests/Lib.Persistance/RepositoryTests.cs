@@ -6,7 +6,7 @@ using System.Text;
 using Autofac;
 using NUnit.Framework;
 
-namespace Seedworkds.Tests.Lib.Persistance
+namespace Seedworks.Tests.Lib.Persistance
 {
     [TestFixture]
     public class RepositoryTests : SampleEntityBaseTest 

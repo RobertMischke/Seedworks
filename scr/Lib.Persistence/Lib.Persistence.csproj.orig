@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{51B62357-FE43-42EF-ACC2-9DED7B343586}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Seedworks.Lib.Persistance</RootNamespace>
+    <AssemblyName>Seedworks.Lib.Persistance</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Iesi.Collections.3.1.0.4000\lib\Net35\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=3.1.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NHibernate.3.1.0.4000\lib\Net35\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+<<<<<<< HEAD:scr/Lib.Persistence/Lib.Persistence.csproj
+    <Compile Include="Persistence.NHibernate\ISessionManager.cs" />
+    <Compile Include="Persistence.NHibernate\Logging\NHibernateLogger.cs" />
+    <Compile Include="Persistence.NHibernate\NHibernateHelper.cs" />
+    <Compile Include="Persistence.NHibernate\RepositoryDb.cs" />
+    <Compile Include="Persistence.NHibernate\SessionExtensions.cs" />
+    <Compile Include="Persistence.NHibernate\SessionFactoryContainer.cs" />
+=======
+    <Compile Include="..\AssemblyVersionAndPublisherInfo.cs">
+      <Link>Properties\AssemblyVersionAndPublisherInfo.cs</Link>
+    </Compile>
+    <Compile Include="Persistance.NHibernate\ISessionManager.cs" />
+    <Compile Include="Persistance.NHibernate\Logging\NHibernateLogger.cs" />
+    <Compile Include="Persistance.NHibernate\NHibernateHelper.cs" />
+    <Compile Include="Persistance.NHibernate\RepositoryDb.cs" />
+    <Compile Include="Persistance.NHibernate\SessionExtensions.cs" />
+    <Compile Include="Persistance.NHibernate\SessionFactoryContainer.cs" />
+>>>>>>> 070582044237f8aa680503127ec3e0821ff1e49f:scr/Lib.Persistance/Lib.Persistance.csproj
+    <Compile Include="Persistence.Query\Condition\CategoryAttributes.cs" />
+    <Compile Include="Persistence.Query\Condition\Condition.cs" />
+    <Compile Include="Persistence.Query\Condition\ConditionComparisonType.cs" />
+    <Compile Include="Persistence.Query\Condition\ConditionContainer.cs" />
+    <Compile Include="Persistence.Query\Condition\ConditionNumericAbstract.cs" />
+    <Compile Include="Persistence.Query\Condition\FilterAttributes.cs" />
+    <Compile Include="Persistence.Query\Condition\FilterCodeGenerator.cs" />
+    <Compile Include="Persistence.Query\Condition\IConditionNumeric.cs" />
+    <Compile Include="Persistence.Query\Condition\Types\ConditionAvgAggregate.cs" />
+    <Compile Include="Persistence.Query\Condition\Types\ConditionBoolean.cs" />
+    <Compile Include="Persistence.Query\Condition\Types\ConditionConjunction.cs" />
+    <Compile Include="Persistence.Query\Condition\Types\ConditionDateTime.cs" />
+    <Compile Include="Persistence.Query\Condition\Types\ConditionDecimal.cs" />
+    <Compile Include="Persistence.Query\Condition\Types\ConditionDisjunction.cs" />
+    <Compile Include="Persistence.Query\Condition\Types\ConditionDouble.cs" />
+    <Compile Include="Persistence.Query\Condition\Types\ConditionHasAffiliateLink.cs" />
+    <Compile Include="Persistence.Query\Condition\Types\ConditionInteger.cs" />
+    <Compile Include="Persistence.Query\Condition\Types\ConditionList.cs" />
+    <Compile Include="Persistence.Query\Condition\Types\ConditionObject.cs" />
+    <Compile Include="Persistence.Query\Condition\Types\ConditionSingle.cs" />
+    <Compile Include="Persistence.Query\Condition\Types\ConditionString.cs" />
+    <Compile Include="Persistence.Query\Condition\Types\ConditionSubquery.cs" />
+    <Compile Include="Persistence.Query\Condition\Types\ConditionTextSearch.cs" />
+    <Compile Include="Persistence.Query\Condition\Types\CondtionEnum.cs" />
+    <Compile Include="Persistence.Query\ISearchDesc.cs" />
+    <Compile Include="Persistence.Query\OrderBy\OrderBy.cs" />
+    <Compile Include="Persistence.Query\OrderBy\OrderByCriteria.cs" />
+    <Compile Include="Persistence.Query\OrderBy\OrderDirection.cs" />
+    <Compile Include="Persistence.Query\Pager\IPager.cs" />
+    <Compile Include="Persistence.Query\Pager\Pager.cs" />
+    <Compile Include="Persistence.Query\Projections.cs" />
+    <Compile Include="Persistence.Query\QueryBatcher.cs" />
+    <Compile Include="Persistence.Query\SearchSpecificationBase.cs" />
+    <Compile Include="Persistence.Setup\BaseSetup.cs" />
+    <Compile Include="Persistence\Interfaces\IDataService.cs" />
+    <Compile Include="Persistence\Interfaces\IUser.cs" />
+    <Compile Include="Persistence\Interfaces\WithDateCreated.cs" />
+    <Compile Include="Persistence\Interfaces\IPersistable.cs" />
+    <Compile Include="Persistence\Interfaces\WithCreatedBy.cs" />
+    <Compile Include="Persistence\Interfaces\WithVersion.cs" />
+    <Compile Include="Persistence\TypeExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Lib\Lib.csproj">
+      <Project>{5EF45459-ECF8-456E-99CE-76060ED17E3D}</Project>
+      <Name>Lib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

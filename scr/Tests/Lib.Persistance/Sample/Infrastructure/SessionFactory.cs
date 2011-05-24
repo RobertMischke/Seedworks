@@ -9,7 +9,7 @@ using NHibernate;
 using NHibernate.Cfg;
 using NHibernate.Tool.hbm2ddl;
 
-namespace Seedworkds.Tests.Lib.Persistance
+namespace Seedworks.Tests.Lib.Persistance
 {
     public static class SessionFactory
     {

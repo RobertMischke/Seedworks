@@ -7,12 +7,11 @@ using NHibernate.Criterion;
 
 namespace Seedworks.Lib.Persistance
 {
-    public abstract class RepositoryDb<TDomainObject, TDomainObjectList>
+    public abstract class RepositoryDb<TDomainObject>
         where TDomainObject : class, IPersistable
-        where TDomainObjectList : PersistableList<TDomainObject>, new()
     {
         protected readonly ISession _session;
-		private TDomainObjectList _allItemsCached;
+		private List<TDomainObject> _allItemsCached;
 		protected event EventHandler<RepositoryDbEventArgs> OnItemMutated;
     	protected event EventHandler<RepositoryDbEventArgs> OnItemCreated;
 		protected event EventHandler<RepositoryDbEventArgs> OnItemDeleted;
@@ -165,9 +164,9 @@ namespace Seedworks.Lib.Persistance
             _allItemsCached = null;
         }
 
-        public virtual TDomainObjectList GetAll()
+        public virtual IList<TDomainObject> GetAll()
         {
-            var list = new TDomainObjectList();
+            var list = new List<TDomainObject>();
 
             if (_allItemsCached != null && _allItemsCached.Count != 0)
                 list.AddRange(_allItemsCached);
@@ -176,7 +175,7 @@ namespace Seedworks.Lib.Persistance
                 list.AddRange(_session.CreateCriteria(typeof (TDomainObject))
                                   .List<TDomainObject>());
 
-                _allItemsCached = new TDomainObjectList();
+                _allItemsCached = new List<TDomainObject>();
                 _allItemsCached.AddRange(list);
             }
 
@@ -198,9 +197,9 @@ namespace Seedworks.Lib.Persistance
             return result;
         }
 
-        public virtual TDomainObjectList GetByIds(params int[] ids)
+        public virtual IList<TDomainObject> GetByIds(params int[] ids)
         {
-            var list = new TDomainObjectList();
+            var list = new List<TDomainObject>();
         	list.AddRange(_session.CreateCriteria(typeof (TDomainObject))
         	              	.Add(Restrictions.In("Id", ids))
         	              	.List<TDomainObject>());
@@ -211,7 +210,7 @@ namespace Seedworks.Lib.Persistance
             return list;
         }
 
-		public virtual TDomainObjectList GetBy(ISearchDesc searchSpec)
+        public virtual IList<TDomainObject> GetBy(ISearchDesc searchSpec)
 		{
 			return GetBy(searchSpec, null);
 		}
@@ -220,7 +219,7 @@ namespace Seedworks.Lib.Persistance
 		/// <param name="searchSpec"></param>
 		/// <param name="criteriaExtender">Here you can plug in additional changes of the criteria.</param>
 		/// <returns></returns>
-        public TDomainObjectList GetBy(ISearchDesc searchSpec, 
+        public IList<TDomainObject> GetBy(ISearchDesc searchSpec, 
                                        Action<ICriteria> criteriaExtender)
         {
             var criteria = GetExecutableCriteria();
@@ -238,10 +237,9 @@ namespace Seedworks.Lib.Persistance
 			// Use MultiCriteria to reduce DB roundtrips.
 			var multiCriteria = _session
 				.CreateMultiCriteria()
-				.Add(criteria)
-				.Add(totalCountCriteria);
+				.Add("data", criteria)
+				.Add("rowCount",totalCountCriteria);
 			IList multiResult;
-			ITransaction trans;
 
 			try
 			{
@@ -255,7 +253,7 @@ namespace Seedworks.Lib.Persistance
 			}
 
 			// Extract results from the multiple result sets
-            var list = new TDomainObjectList();
+            var list = new List<TDomainObject>();
 			list.AddRange(((IList)multiResult[0]).Cast<TDomainObject>());
 
 			searchSpec.TotalItems = (int) ((IList) multiResult[1])[0];
@@ -307,10 +305,10 @@ namespace Seedworks.Lib.Persistance
 
         protected class TDomainObjectListArgs : EventArgs
         {
-			private readonly TDomainObjectList _items;
-			public TDomainObjectList Items { get { return _items; } }
+			private readonly IList<TDomainObject> _items;
+            public IList<TDomainObject> Items { get { return _items; } }
 
-            public TDomainObjectListArgs(TDomainObjectList items)
+            public TDomainObjectListArgs(IList<TDomainObject> items)
 			{
 				_items = items;
 			}            

@@ -6,12 +6,17 @@ using Autofac;
 using NHibernate;
 using NUnit.Framework;
 
-namespace Seedworkds.Tests.Lib.Persistance
+namespace Seedworks.Tests.Lib.Persistance
 {
     [TestFixture]
     public class SampleEntityBaseTest
     {
         protected IContainer _container;
+
+        static SampleEntityBaseTest()
+        {
+            HibernatingRhinos.Profiler.Appender.NHibernate.NHibernateProfiler.Initialize();
+        }
 
         [SetUp]
         public void Setup()

@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{A38F047C-E293-4C46-8F34-19914969B18F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B1FB7AFC-E3B8-4A2F-8ECF-D7E37397F9E4}"
+	ProjectSection(SolutionItems) = preProject
+		AssemblyVersionAndPublisherInfo.cs = AssemblyVersionAndPublisherInfo.cs
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lib", "Lib\Lib.csproj", "{5EF45459-ECF8-456E-99CE-76060ED17E3D}"
 EndProject
