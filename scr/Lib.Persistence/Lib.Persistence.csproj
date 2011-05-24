@@ -46,12 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Persistance.NHibernate\ISessionManager.cs" />
-    <Compile Include="Persistance.NHibernate\Logging\NHibernateLogger.cs" />
-    <Compile Include="Persistance.NHibernate\NHibernateHelper.cs" />
-    <Compile Include="Persistance.NHibernate\RepositoryDb.cs" />
-    <Compile Include="Persistance.NHibernate\SessionExtensions.cs" />
-    <Compile Include="Persistance.NHibernate\SessionFactoryContainer.cs" />
+    <Compile Include="Persistence.NHibernate\ISessionManager.cs" />
+    <Compile Include="Persistence.NHibernate\Logging\NHibernateLogger.cs" />
+    <Compile Include="Persistence.NHibernate\NHibernateHelper.cs" />
+    <Compile Include="Persistence.NHibernate\RepositoryDb.cs" />
+    <Compile Include="Persistence.NHibernate\SessionExtensions.cs" />
+    <Compile Include="Persistence.NHibernate\SessionFactoryContainer.cs" />
     <Compile Include="Persistence.Query\Condition\CategoryAttributes.cs" />
     <Compile Include="Persistence.Query\Condition\Condition.cs" />
     <Compile Include="Persistence.Query\Condition\ConditionComparisonType.cs" />
