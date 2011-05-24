@@ -35,8 +35,7 @@ namespace Seedworks.Tests.Lib
         [Test]
         public void Foo()
         {
-            var foo = new Specification<SampleEntity>(x => x.DateCreated, 
-                                                      x=> x.Name );
+            var foo = new Specification<SampleEntity>(x => x.DateCreated);
         }
 
 

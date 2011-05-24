@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>Seedworks.Persistance</id>
+    <id>Seedworks.Persistence</id>
     <version>0.8.2.0</version>
     <authors>Robert Mischke</authors>
     <owners>Robert Mischke</owners>
