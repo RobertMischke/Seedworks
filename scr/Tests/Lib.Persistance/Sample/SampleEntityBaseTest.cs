@@ -6,7 +6,7 @@ using Autofac;
 using NHibernate;
 using NUnit.Framework;
 
-namespace Seedworks.Tests.Lib.Persistance
+namespace Seedworks.Tests.Lib.Persistence
 {
     [TestFixture]
     public class SampleEntityBaseTest

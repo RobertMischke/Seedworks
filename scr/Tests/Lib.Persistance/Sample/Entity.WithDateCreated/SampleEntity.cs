@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using Seedworks.Lib.Persistance;
 
-namespace Seedworks.Tests.Lib.Persistance
+namespace Seedworks.Tests.Lib.Persistence
 {
     public class SampleEntity : IPersistable, WithDateCreated
     {

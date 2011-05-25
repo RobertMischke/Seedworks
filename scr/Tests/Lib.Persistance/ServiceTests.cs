@@ -5,7 +5,7 @@ using System.Text;
 using Autofac;
 using NUnit.Framework;
 
-namespace Seedworks.Tests.Lib.Persistance
+namespace Seedworks.Tests.Lib.Persistence
 {
     /// <summary>
     /// Example usage 

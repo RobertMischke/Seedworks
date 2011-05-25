@@ -4,7 +4,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using NUnit.Framework;
-using Seedworks.Tests.Lib.Persistance;
+using Seedworks.Tests.Lib.Persistence;
 
 namespace Seedworks.Tests.Lib
 {

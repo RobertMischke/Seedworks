@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 using System.Text;
 using FluentNHibernate.Mapping;
 
-namespace Seedworks.Tests.Lib.Persistance
+namespace Seedworks.Tests.Lib.Persistence
 {
     public class SampleEntityMap : ClassMap<SampleEntity>
     {
