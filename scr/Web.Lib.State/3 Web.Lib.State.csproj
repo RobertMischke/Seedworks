@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{975376D2-F700-40F7-AADE-A2C245D21D5D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Web.Lib.State</RootNamespace>
+    <AssemblyName>Web.Lib.State</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Application\AppData.cs" />
+    <Compile Include="Application\BaseAppState.cs" />
+    <Compile Include="Cache\Cache.cs" />
+    <Compile Include="Cache\CacheAnalyzer\CacheAnalyzer.cs" />
+    <Compile Include="Cache\CacheAnalyzer\CacheItemTypeSummary.cs" />
+    <Compile Include="Cache\CacheAnalyzer\CacheItemTypeSummaryList.cs" />
+    <Compile Include="Cache\CacheAnalyzer\CacheItemWrapper.cs" />
+    <Compile Include="Cache\Impl\CacheAspNet.cs" />
+    <Compile Include="Cache\Impl\ICache.cs" />
+    <Compile Include="ContextUtil.cs" />
+    <Compile Include="HttpCurrent\HttpCurrent.cs" />
+    <Compile Include="HttpCurrent\HttpCurrentNoWeb.cs" />
+    <Compile Include="HttpCurrent\HttpCurrentWeb.cs" />
+    <Compile Include="HttpCurrent\HttpExtensionMethods.cs" />
+    <Compile Include="HttpCurrent\Request\IRequest.cs" />
+    <Compile Include="HttpCurrent\Request\RequestNoWeb.cs" />
+    <Compile Include="HttpCurrent\Request\RequestWeb.cs" />
+    <Compile Include="HttpCurrent\Response\IResponse.cs" />
+    <Compile Include="HttpCurrent\Response\Response.cs" />
+    <Compile Include="HttpCurrent\Response\ResponseActionFilter.cs" />
+    <Compile Include="HttpCurrent\Response\ResponseNoWeb.cs" />
+    <Compile Include="HttpCurrent\Response\ResponseWeb.cs" />
+    <Compile Include="Parameters\ParameterHandler.cs" />
+    <Compile Include="Parameters\ParameterHandlerList.cs" />
+    <Compile Include="Parameters\ParameterHandlerService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Session\SessionBase.cs" />
+    <Compile Include="Session\RequestData.cs" />
+    <Compile Include="Session\SessionData.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Lib\1 Lib.csproj">
+      <Project>{5EF45459-ECF8-456E-99CE-76060ED17E3D}</Project>
+      <Name>1 Lib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

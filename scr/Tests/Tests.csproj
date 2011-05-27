@@ -99,14 +99,19 @@
     <Compile Include="Lib.Persistance\Sample\Infrastructure\SessionFactory.cs" />
     <Compile Include="Lib.Persistance\Sample\SampleEntityBaseTest.cs" />
     <Compile Include="Lib\AlternativeSpecImplementation.cs" />
+    <Compile Include="Lib\Web\UriUtilsTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Lib.Persistance\Sample\Entity.WithUser\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Lib.Persistence\Lib.Persistence.csproj">
+    <ProjectReference Include="..\Lib.Persistence\2 Lib.Persistence.csproj">
       <Project>{51B62357-FE43-42EF-ACC2-9DED7B343586}</Project>
-      <Name>Lib.Persistence</Name>
+      <Name>2 Lib.Persistence</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lib\1 Lib.csproj">
+      <Project>{5EF45459-ECF8-456E-99CE-76060ED17E3D}</Project>
+      <Name>1 Lib</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

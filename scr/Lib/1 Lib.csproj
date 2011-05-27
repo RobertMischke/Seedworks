@@ -47,7 +47,12 @@
     <Compile Include="ExtensionMethods\StringExtensions.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ValueObjects\BinarySize.cs" />
+    <Compile Include="ValueObjects\MediaSize\MediaLength.cs" />
+    <Compile Include="ValueObjects\MediaSize\TimeCode.cs" />
+    <Compile Include="Web\UriUtils.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
