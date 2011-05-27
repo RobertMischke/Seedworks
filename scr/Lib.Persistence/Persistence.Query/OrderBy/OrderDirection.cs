@@ -5,7 +5,7 @@ using System.Text;
 
 
 
-namespace Seedworks.Lib.Persistance
+namespace Seedworks.Lib.Persistence
 {
     [Serializable]
     public enum OrderDirection

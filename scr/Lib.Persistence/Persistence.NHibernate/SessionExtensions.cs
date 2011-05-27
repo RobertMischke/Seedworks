@@ -6,7 +6,7 @@ using NHibernate.Engine;
 using NHibernate.Persister.Entity;
 using NHibernate.Proxy;
 
-namespace Seedworks.Lib.Persistance.Persistance.NHibernate
+namespace Seedworks.Lib.Persistence.Persistance.NHibernate
 {
 	public static class SessionExtensions
 	{

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using NHibernate;
 using NHibernate.Criterion;
 
-namespace Seedworks.Lib.Persistance
+namespace Seedworks.Lib.Persistence
 {
     [Serializable]
     public abstract class ConditionList<T> : Condition 

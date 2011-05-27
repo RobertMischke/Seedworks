@@ -3,9 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Seedworks.Lib.Persistance;
+using Seedworks.Lib.Persistence;
 
-namespace Seedworks.Lib.Persistance
+namespace Seedworks.Lib.Persistence
 {
     public abstract class BaseSetup<TSubject, TDerivedClass> where TDerivedClass : BaseSetup<TSubject, TDerivedClass>
     {

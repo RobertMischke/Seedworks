@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Seedworks.Lib.Persistance
+namespace Seedworks.Lib.Persistence
 {
 	[Serializable]
 	public class ConditionSingle : ConditionNumericAbstract, IConditionNumeric

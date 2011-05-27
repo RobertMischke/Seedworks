@@ -5,7 +5,7 @@ using System.Text;
 using NHibernate;
 using NHibernate.SqlCommand;
 
-namespace Seedworks.Lib.Persistance
+namespace Seedworks.Lib.Persistence
 {
     [Serializable]
     public class ConditionContainer : List<Condition>

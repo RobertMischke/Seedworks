@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using NHibernate;
 
-namespace Seedworks.Lib.Persistance
+namespace Seedworks.Lib.Persistence
 {
 	[Serializable]
 	public class OrderByExtender

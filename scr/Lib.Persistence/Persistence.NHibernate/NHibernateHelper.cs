@@ -6,7 +6,7 @@ using NHibernate.Cfg;
 using NHibernate.Stat;
 using NHibernate.Tool.hbm2ddl;
 
-namespace Seedworks.Lib.Persistance
+namespace Seedworks.Lib.Persistence
 {
 	public class NHibernateHelper
 	{ 

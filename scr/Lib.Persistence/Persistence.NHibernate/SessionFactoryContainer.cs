@@ -5,7 +5,7 @@ using System.Text;
 using NHibernate;
 using NHibernate.Cfg;
 
-namespace Seedworks.Lib.Persistance
+namespace Seedworks.Lib.Persistence
 {
     public class SessionFactoryContainer
     {

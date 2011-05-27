@@ -5,7 +5,7 @@ using System.Linq;
 using NHibernate;
 using NHibernate.Criterion;
 
-namespace Seedworks.Lib.Persistance
+namespace Seedworks.Lib.Persistence
 {
     public abstract class RepositoryDb<TDomainObject>
         where TDomainObject : class, IPersistable

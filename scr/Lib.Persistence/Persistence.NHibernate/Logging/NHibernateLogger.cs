@@ -5,7 +5,7 @@ using System.Text;
 using NHibernate;
 using NHibernate.Stat;
 
-namespace Seedworks.Lib.Persistance.Persistance
+namespace Seedworks.Lib.Persistence.Persistance
 {
     public class NHibernateLogger
     {

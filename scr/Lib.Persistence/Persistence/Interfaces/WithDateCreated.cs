@@ -1,6 +1,6 @@
 using System;
 
-namespace Seedworks.Lib.Persistance
+namespace Seedworks.Lib.Persistence
 {
     public interface WithDateCreated 
     {

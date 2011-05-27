@@ -8,7 +8,7 @@ using NHibernate;
 using NHibernate.SqlCommand;
 using NHibernate.Type;
 
-namespace Seedworks.Lib.Persistance
+namespace Seedworks.Lib.Persistence
 {
     public class _Projections
     {

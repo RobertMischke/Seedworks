@@ -4,7 +4,7 @@ using System.Linq;
 using NHibernate;
 using NHibernate.Criterion;
 
-namespace Seedworks.Lib.Persistance
+namespace Seedworks.Lib.Persistence
 {
 	/// <summary>
 	/// Tightly coupled to Generic.Core AffiliateLink functionality, but here for inspiration :-)

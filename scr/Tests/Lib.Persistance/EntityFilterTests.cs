@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using Autofac;
 using NUnit.Framework;
-using Seedworks.Lib.Persistance;
+using Seedworks.Lib.Persistence;
 
 namespace Seedworks.Tests.Lib.Persistence
 {

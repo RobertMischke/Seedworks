@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using NHibernate.Criterion;
 
-namespace Seedworks.Lib.Persistance
+namespace Seedworks.Lib.Persistence
 {
 	[Serializable]
 	public class ConditionDecimal : ConditionNumericAbstract, IConditionNumeric

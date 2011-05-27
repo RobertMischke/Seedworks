@@ -2,7 +2,7 @@ using System;
 using NHibernate;
 using NHibernate.Criterion;
 
-namespace Seedworks.Lib.Persistance
+namespace Seedworks.Lib.Persistence
 {
 	[Serializable]
 	public class ConditionDateTime : Condition

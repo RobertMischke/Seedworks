@@ -8,8 +8,8 @@
     <ProjectGuid>{975376D2-F700-40F7-AADE-A2C245D21D5D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Web.Lib.State</RootNamespace>
-    <AssemblyName>Web.Lib.State</AssemblyName>
+    <RootNamespace>Seedworks.Web.State</RootNamespace>
+    <AssemblyName>Seedworks.Web.Lib.Persistence</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
