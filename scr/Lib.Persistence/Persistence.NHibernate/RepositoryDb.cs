@@ -103,8 +103,8 @@ namespace Seedworks.Lib.Persistence
         public virtual void Create(TDomainObject domainObject)
         {
             domainObject.DateCreated = DateTime.Now;
-			if (domainObject is WithDateCreated)
-				(domainObject as WithDateCreated).DateModified = DateTime.Now;
+			if (domainObject is WithDateModified)
+				(domainObject as WithDateModified).DateModified = DateTime.Now;
 
 			_session.Save(domainObject);
             ClearAllItemCache();
@@ -115,8 +115,8 @@ namespace Seedworks.Lib.Persistence
 
     	public virtual void Update(TDomainObject domainObject)
         {
-			if (domainObject is WithDateCreated)
-				(domainObject as WithDateCreated).DateModified = DateTime.Now;
+			if (domainObject is WithDateModified)
+				(domainObject as WithDateModified).DateModified = DateTime.Now;
 
             _session.Update(domainObject);
 			ClearAllItemCache();
@@ -132,8 +132,8 @@ namespace Seedworks.Lib.Persistence
 			if (domainObject.DateCreated == DateTime.MinValue)
 				domainObject.DateCreated = DateTime.Now;
 
-			if (domainObject is WithDateCreated)
-				(domainObject as WithDateCreated).DateModified = DateTime.Now;
+			if (domainObject is WithDateModified)
+				(domainObject as WithDateModified).DateModified = DateTime.Now;
 
 			_session.SaveOrUpdate(domainObject);
 			ClearAllItemCache();

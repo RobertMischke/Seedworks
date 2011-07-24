@@ -89,14 +89,14 @@
     <Compile Include="Persistence.Setup\BaseSetup.cs" />
     <Compile Include="Persistence\Interfaces\IDataService.cs" />
     <Compile Include="Persistence\Interfaces\IUser.cs" />
-    <Compile Include="Persistence\Interfaces\WithDateCreated.cs" />
+    <Compile Include="Persistence\Interfaces\WithDateModified.cs" />
     <Compile Include="Persistence\Interfaces\IPersistable.cs" />
     <Compile Include="Persistence\Interfaces\WithCreatedBy.cs" />
     <Compile Include="Persistence\Interfaces\WithVersion.cs" />
     <Compile Include="Persistence\TypeExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Lib\Lib.csproj">
+    <ProjectReference Include="..\Lib\1 Lib.csproj">
       <Project>{5EF45459-ECF8-456E-99CE-76060ED17E3D}</Project>
       <Name>Lib</Name>
     </ProjectReference>
