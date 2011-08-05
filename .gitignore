@@ -14,3 +14,5 @@ _Re[Ss]harper.*
 *.nupkg
 nuget/Seedworks.Persistence/lib/*.dll
 nuget/Seedworks.Persistence/lib/*.pdb
+nuget/Seedworks.Web.State/lib/*.dll
+nuget/Seedworks.Web.State/lib/*.pdb
