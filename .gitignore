@@ -12,3 +12,5 @@ _Re[Ss]harper.*
 *~
 *.swp
 *.nupkg
+nuget/Seedworks.Persistence/lib/*.dll
+nuget/Seedworks.Persistence/lib/*.pdb
