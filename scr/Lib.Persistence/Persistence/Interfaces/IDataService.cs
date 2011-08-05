@@ -14,8 +14,8 @@ namespace Seedworks.Lib.Persistence
         void Delete(T item);
         void Delete(int id);
 
-        List<T> GetAll();
+        IList<T> GetAll();
         T GetById(int id);
-        List<T> GetBy(ISearchDesc searchDesc);
+        IList<T> GetBy(ISearchDesc searchDesc);
     }
 }
