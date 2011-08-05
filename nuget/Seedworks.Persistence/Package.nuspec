@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Seedworks.Persistence</id>
-    <version>0.8.2.3</version>
+    <version>0.8.2.5</version>
     <authors>Robert Mischke</authors>
     <owners>Robert Mischke</owners>
     <projectUrl>https://github.com/RobertMischke/Seedworks</projectUrl>
