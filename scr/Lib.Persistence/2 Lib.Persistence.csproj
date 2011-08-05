@@ -48,7 +48,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Persistence.NHibernate\ISessionManager.cs" />
-    <Compile Include="Persistence.NHibernate\Logging\NHibernateLogger.cs" />
     <Compile Include="Persistence.NHibernate\NHibernateHelper.cs" />
     <Compile Include="Persistence.NHibernate\RepositoryDb.cs" />
     <Compile Include="Persistence.NHibernate\SessionExtensions.cs" />
