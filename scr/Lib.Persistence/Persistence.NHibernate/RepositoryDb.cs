@@ -113,6 +113,12 @@ namespace Seedworks.Lib.Persistence
 				OnItemCreated(this, new RepositoryDbEventArgs(domainObject));
         }
 
+        public virtual void Create(IList<TDomainObject> domainObjects)
+        {
+            foreach (var domainObject in domainObjects)
+                Create(domainObject);
+        }
+
     	public virtual void Update(TDomainObject domainObject)
         {
 			if (domainObject is WithDateModified)
