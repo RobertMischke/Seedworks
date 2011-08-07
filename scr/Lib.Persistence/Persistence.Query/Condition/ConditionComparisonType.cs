@@ -12,6 +12,7 @@ namespace Seedworks.Lib.Persistence
         Less, 
         Equal,
         LessOrEqual,
+        NotEqual
     }
 
 
