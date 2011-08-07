@@ -89,12 +89,17 @@
     </Compile>
     <Compile Include="Lib.Persistance\RepositoryGetBySingleTests.cs" />
     <Compile Include="Lib.Persistance\EntityFilterTests.cs" />
+    <Compile Include="Lib.Persistance\Sample\Entity.BaseTypeEntity\SampleEntityBaseEntity.cs" />
+    <Compile Include="Lib.Persistance\Sample\Entity.BaseTypeEntity\SampleEntityBaseEntityMap.cs" />
+    <Compile Include="Lib.Persistance\Sample\Entity.BaseTypeEntity\SampleEntityBaseEntityRepository.cs" />
+    <Compile Include="Lib.Persistance\Sample\Entity.BaseTypeEntity\SampleEntityBaseEntitySearchSpec.cs" />
+    <Compile Include="Lib.Persistance\Sample\Entity.BaseTypeEntity\SampleEntityService.cs" />
     <Compile Include="Lib.Persistance\ServiceTests.cs" />
-    <Compile Include="Lib.Persistance\Sample\Entity.WithDateCreated\SampleEntity.cs" />
-    <Compile Include="Lib.Persistance\Sample\Entity.WithDateCreated\SampleEntityMap.cs" />
-    <Compile Include="Lib.Persistance\Sample\Entity.WithDateCreated\SampleEntityRepository.cs" />
-    <Compile Include="Lib.Persistance\Sample\Entity.WithDateCreated\SampleEntitySearchSpec.cs" />
-    <Compile Include="Lib.Persistance\Sample\Entity.WithDateCreated\SampleEntityService.cs" />
+    <Compile Include="Lib.Persistance\Sample\Entity.WithDateModified\SampleEntity.cs" />
+    <Compile Include="Lib.Persistance\Sample\Entity.WithDateModified\SampleEntityMap.cs" />
+    <Compile Include="Lib.Persistance\Sample\Entity.WithDateModified\SampleEntityRepository.cs" />
+    <Compile Include="Lib.Persistance\Sample\Entity.WithDateModified\SampleEntitySearchSpec.cs" />
+    <Compile Include="Lib.Persistance\Sample\Entity.WithDateModified\SampleEntityService.cs" />
     <Compile Include="Lib.Persistance\RepositoryTests.cs" />
     <Compile Include="Lib.Persistance\Sample\Infrastructure\SessionFactory.cs" />
     <Compile Include="Lib.Persistance\Sample\SampleEntityBaseTest.cs" />
