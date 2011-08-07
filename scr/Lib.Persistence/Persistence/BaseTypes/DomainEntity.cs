@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Seedworks.Lib.Persistence.Persistence.BaseTypes
+namespace Seedworks.Lib.Persistence
 {
     /// <remarks>
     /// Based on:
@@ -11,7 +11,7 @@ namespace Seedworks.Lib.Persistence.Persistence.BaseTypes
     /// </remarks>>
     public class DomainEntity :  Entity, WithDateCreated, WithDateModified
     {
-        public DateTime DateCreated { get; set; }
-        public DateTime DateModified { get; set; }
+        public virtual DateTime DateCreated { get; set; }
+        public virtual DateTime DateModified { get; set; }
     }
 }
