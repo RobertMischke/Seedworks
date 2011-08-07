@@ -86,9 +86,10 @@
     <Compile Include="Persistence.Query\QueryBatcher.cs" />
     <Compile Include="Persistence.Query\SearchSpecificationBase.cs" />
     <Compile Include="Persistence.Setup\BaseSetup.cs" />
-    <Compile Include="Persistence\Entity.cs" />
+    <Compile Include="Persistence\BaseTypes\Entity.cs" />
     <Compile Include="Persistence\Interfaces\IDataService.cs" />
     <Compile Include="Persistence\Interfaces\IUser.cs" />
+    <Compile Include="Persistence\Interfaces\WithDateCreated.cs" />
     <Compile Include="Persistence\Interfaces\WithDateModified.cs" />
     <Compile Include="Persistence\Interfaces\IPersistable.cs" />
     <Compile Include="Persistence\Interfaces\WithCreatedBy.cs" />

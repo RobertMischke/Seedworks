@@ -9,14 +9,13 @@ namespace Seedworks.Lib.Persistence
     /// Based on:
     /// https://github.com/Slesa/Playground/blob/master/src/lib/DataAccess/DataAccess/DomainEntity.cs
     /// </remarks>>
-    public class Entity : IEquatable<Entity>, IPersistable, WithDateModified
+    public class DomainEntity : IEquatable<DomainEntity>, IPersistable, WithDateCreated, WithDateModified
     {
-
-        protected Entity()
+        protected DomainEntity()
         {
         }
 
-        protected Entity(int id)
+        protected DomainEntity(int id)
         {
             Id = id;
         }
@@ -26,7 +25,7 @@ namespace Seedworks.Lib.Persistence
         public DateTime DateCreated { get; set; }
         public DateTime DateModified { get; set; }
 
-        public virtual bool Equals(Entity other)
+        public virtual bool Equals(DomainEntity other)
         {
             if (ReferenceEquals(null, other)) return false;
             if (ReferenceEquals(this, other)) return true;
@@ -35,7 +34,7 @@ namespace Seedworks.Lib.Persistence
 
         public override bool Equals(object obj)
         {
-            return Equals(obj as Entity);
+            return Equals(obj as DomainEntity);
         }
 
         public override int GetHashCode()
@@ -43,12 +42,12 @@ namespace Seedworks.Lib.Persistence
             return Id.Equals(default(int)) ? base.GetHashCode() : Id.GetHashCode();
         }
 
-        public static bool operator ==(Entity left, Entity right)
+        public static bool operator ==(DomainEntity left, DomainEntity right)
         {
             return Equals(left, right);
         }
 
-        public static bool operator !=(Entity left, Entity right)
+        public static bool operator !=(DomainEntity left, DomainEntity right)
         {
             return !Equals(left, right);
         }
