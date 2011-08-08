@@ -9,6 +9,7 @@ namespace Seedworks.Lib.Persistence
     /// Based on:
     /// https://github.com/Slesa/Playground/blob/master/src/lib/DataAccess/DataAccess/DomainEntity.cs
     /// </remarks>>
+    [Serializable]
     public class Entity : IEquatable<Entity>, IPersistable
     {
         protected Entity()
