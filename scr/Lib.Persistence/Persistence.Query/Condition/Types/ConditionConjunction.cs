@@ -24,7 +24,5 @@ namespace Seedworks.Lib.Persistence
         {
            return Restrictions.Eq(PropertyName, item);
         }
-
-
     }
 }
