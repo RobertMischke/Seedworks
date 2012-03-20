@@ -84,14 +84,14 @@
     <Compile Include="..\AssemblyVersionAndPublisherInfo.cs">
       <Link>Properties\AssemblyVersionAndPublisherInfo.cs</Link>
     </Compile>
-    <Compile Include="Lib.Persistance\RepositoryGetBySingleTests.cs" />
-    <Compile Include="Lib.Persistance\EntityFilterTests.cs" />
+    <Compile Include="Infrastructure\BaseTestSetting.cs" />
+    <Compile Include="Lib.Persistance\EntityFilterTestsEntitites.cs" />
+    <Compile Include="Lib.Persistance\RepositoryGetBySingleTestsEntitites.cs" />
     <Compile Include="Lib.Persistance\Sample\Entity.BaseTypeEntity\SampleEntityBaseEntity.cs" />
     <Compile Include="Lib.Persistance\Sample\Entity.BaseTypeEntity\SampleEntityBaseEntityMap.cs" />
     <Compile Include="Lib.Persistance\Sample\Entity.BaseTypeEntity\SampleEntityBaseEntityRepository.cs" />
     <Compile Include="Lib.Persistance\Sample\Entity.BaseTypeEntity\SampleEntityBaseEntitySearchSpec.cs" />
     <Compile Include="Lib.Persistance\Sample\Entity.BaseTypeEntity\SampleEntityService.cs" />
-    <Compile Include="Lib.Persistance\ServiceTests.cs" />
     <Compile Include="Lib.Persistance\Sample\Entity.WithDateModified\SampleEntity.cs" />
     <Compile Include="Lib.Persistance\Sample\Entity.WithDateModified\SampleEntityMap.cs" />
     <Compile Include="Lib.Persistance\Sample\Entity.WithDateModified\SampleEntityRepository.cs" />
@@ -100,6 +100,7 @@
     <Compile Include="Lib.Persistance\RepositoryTestsEntitites.cs" />
     <Compile Include="Infrastructure\SessionFactory.cs" />
     <Compile Include="Infrastructure\BaseTestEntitites.cs" />
+    <Compile Include="Lib.Persistance\ServiceTestsEntitites.cs" />
     <Compile Include="Lib.Settings\SettingBag1.cs" />
     <Compile Include="Lib.Settings\SettingBag1Loader.cs" />
     <Compile Include="Lib.Settings\SettingTests.cs" />
