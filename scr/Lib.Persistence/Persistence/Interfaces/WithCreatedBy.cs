@@ -7,7 +7,6 @@ namespace Seedworks.Lib.Persistence
 {
     public interface WithCreatedBy
     {
-        IUser CreatedBy { get; set; }
-    
+        IUser CreatedBy { get; set; }   
     }
 }

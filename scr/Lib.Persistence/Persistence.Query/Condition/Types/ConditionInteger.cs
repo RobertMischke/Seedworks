@@ -7,7 +7,7 @@ using NHibernate.Criterion;
 namespace Seedworks.Lib.Persistence
 {
 	[Serializable]
-	public class ConditionInteger : ConditionNumericAbstract, IConditionNumeric
+	public class ConditionInteger : ConditionNumericAbstract
     {
         private const int _noValue = -1;
         private int _value = _noValue;
@@ -81,6 +81,14 @@ namespace Seedworks.Lib.Persistence
         {
             SetQueryEqual();
             _value = id;
+
+            Conditions.AddUnique(this);
+        }
+
+        public void IsNotEqualTo(int execptForId)
+        {
+            _value = execptForId;
+            SetQueryNotEqual();
 
             Conditions.AddUnique(this);
         }

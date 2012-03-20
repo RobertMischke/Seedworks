@@ -35,23 +35,26 @@
     <Reference Include="Accessibility">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
-    <Reference Include="Autofac, Version=2.4.5.724, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+    <Reference Include="Autofac, Version=2.5.2.830, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Autofac.2.4.5.724\lib\NET40\Autofac.dll</HintPath>
+      <HintPath>..\packages\Autofac.2.5.2.830\lib\NET40\Autofac.dll</HintPath>
     </Reference>
-    <Reference Include="Autofac.Configuration">
-      <HintPath>..\packages\Autofac.2.4.5.724\lib\NET40\Autofac.Configuration.dll</HintPath>
+    <Reference Include="Autofac.Configuration, Version=2.5.2.830, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Autofac.2.5.2.830\lib\NET40\Autofac.Configuration.dll</HintPath>
     </Reference>
-    <Reference Include="FluentNHibernate">
+    <Reference Include="FluentNHibernate, Version=1.3.0.717, Culture=neutral, PublicKeyToken=8aa435e3cb308880, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\FluentNHibernate.1.3.0.717\lib\FluentNHibernate.dll</HintPath>
     </Reference>
     <Reference Include="HibernatingRhinos.Profiler.Appender.v4.0">
       <HintPath>..\packages\_noneNuGet\HibernatingRhinos.Profiler.Appender.v4.0.dll</HintPath>
     </Reference>
-    <Reference Include="Iesi.Collections">
+    <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
       <HintPath>..\packages\Iesi.Collections.3.2.0.4000\lib\Net35\Iesi.Collections.dll</HintPath>
     </Reference>
-    <Reference Include="NHibernate">
+    <Reference Include="NHibernate, Version=3.2.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\NHibernate.3.2.0.4000\lib\Net35\NHibernate.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework, Version=2.5.10.11092, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
@@ -81,15 +84,19 @@
     <Compile Include="..\AssemblyVersionAndPublisherInfo.cs">
       <Link>Properties\AssemblyVersionAndPublisherInfo.cs</Link>
     </Compile>
-    <Compile Include="Lib.Persistance\RepositoryGetBySingleTestsEntitites.cs" />
-    <Compile Include="Lib.Persistance\EntityFilterTestsEntitites.cs" />
-    <Compile Include="Infrastructure\BaseTestSetting.cs" />
-    <Compile Include="Lib.Persistance\ServiceTestsEntitites.cs" />
-    <Compile Include="Lib.Persistance\Sample\Entity.WithDateCreated\SampleEntity.cs" />
-    <Compile Include="Lib.Persistance\Sample\Entity.WithDateCreated\SampleEntityMap.cs" />
-    <Compile Include="Lib.Persistance\Sample\Entity.WithDateCreated\SampleEntityRepository.cs" />
-    <Compile Include="Lib.Persistance\Sample\Entity.WithDateCreated\SampleEntitySearchSpec.cs" />
-    <Compile Include="Lib.Persistance\Sample\Entity.WithDateCreated\SampleEntityService.cs" />
+    <Compile Include="Lib.Persistance\RepositoryGetBySingleTests.cs" />
+    <Compile Include="Lib.Persistance\EntityFilterTests.cs" />
+    <Compile Include="Lib.Persistance\Sample\Entity.BaseTypeEntity\SampleEntityBaseEntity.cs" />
+    <Compile Include="Lib.Persistance\Sample\Entity.BaseTypeEntity\SampleEntityBaseEntityMap.cs" />
+    <Compile Include="Lib.Persistance\Sample\Entity.BaseTypeEntity\SampleEntityBaseEntityRepository.cs" />
+    <Compile Include="Lib.Persistance\Sample\Entity.BaseTypeEntity\SampleEntityBaseEntitySearchSpec.cs" />
+    <Compile Include="Lib.Persistance\Sample\Entity.BaseTypeEntity\SampleEntityService.cs" />
+    <Compile Include="Lib.Persistance\ServiceTests.cs" />
+    <Compile Include="Lib.Persistance\Sample\Entity.WithDateModified\SampleEntity.cs" />
+    <Compile Include="Lib.Persistance\Sample\Entity.WithDateModified\SampleEntityMap.cs" />
+    <Compile Include="Lib.Persistance\Sample\Entity.WithDateModified\SampleEntityRepository.cs" />
+    <Compile Include="Lib.Persistance\Sample\Entity.WithDateModified\SampleEntitySearchSpec.cs" />
+    <Compile Include="Lib.Persistance\Sample\Entity.WithDateModified\SampleEntityService.cs" />
     <Compile Include="Lib.Persistance\RepositoryTestsEntitites.cs" />
     <Compile Include="Infrastructure\SessionFactory.cs" />
     <Compile Include="Infrastructure\BaseTestEntitites.cs" />

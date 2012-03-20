@@ -54,6 +54,11 @@ namespace Seedworks.Lib.Persistence
             return _queryType == ConditionComparisonType.Equal;
         }
 
+        public bool IsNotEqualTo()
+        {
+            return _queryType == ConditionComparisonType.NotEqual;
+        }
+
         public bool IsLessThanOrEqual()
         {
             return _queryType == ConditionComparisonType.LessOrEqual;
@@ -79,6 +84,11 @@ namespace Seedworks.Lib.Persistence
             _queryType = ConditionComparisonType.Equal;
         }
 
+        protected void SetQueryNotEqual()
+        {
+            _queryType = ConditionComparisonType.NotEqual;
+        }
+
         protected bool RemoveIfMinusOne(object value)
         {
             if (Convert.ToInt32(value) == -1)
@@ -98,6 +108,9 @@ namespace Seedworks.Lib.Persistence
         {
             if (IsEqualTo())
                 return Restrictions.Eq(PropertyName, GetValue());
+
+            if (IsNotEqualTo())
+                return !Restrictions.Eq(PropertyName, GetValue());
             
             if (IsGreaterThan())
                 return Restrictions.Gt(PropertyName, GetValue());

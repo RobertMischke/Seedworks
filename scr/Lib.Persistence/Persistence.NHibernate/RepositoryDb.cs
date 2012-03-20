@@ -103,15 +103,23 @@ namespace Seedworks.Lib.Persistence
 
         public virtual void Create(TDomainObject domainObject)
         {
-            domainObject.DateCreated = DateTime.Now;
-			if (domainObject is WithDateModified)
-				(domainObject as WithDateModified).DateModified = DateTime.Now;
+            if (domainObject is WithDateCreated)
+                (domainObject as WithDateCreated).DateCreated = DateTime.Now;
+
+		    if (domainObject is WithDateModified)
+			    (domainObject as WithDateModified).DateModified = DateTime.Now;
 
 			_session.Save(domainObject);
             ClearAllItemCache();
 
 			if (OnItemCreated != null)
 				OnItemCreated(this, new RepositoryDbEventArgs(domainObject));
+        }
+
+        public virtual void Create(IList<TDomainObject> domainObjects)
+        {
+            foreach (var domainObject in domainObjects)
+                Create(domainObject);
         }
 
     	public virtual void Update(TDomainObject domainObject)
@@ -130,8 +138,11 @@ namespace Seedworks.Lib.Persistence
 		{
         	var creating = domainObject.Id == 0;
 
-			if (domainObject.DateCreated == DateTime.MinValue)
-				domainObject.DateCreated = DateTime.Now;
+            if (domainObject is WithDateCreated)
+            {
+                if ((domainObject as WithDateCreated).DateCreated == DateTime.MinValue)
+                    (domainObject as WithDateCreated).DateCreated = DateTime.Now;                
+            }
 
 			if (domainObject is WithDateModified)
 				(domainObject as WithDateModified).DateModified = DateTime.Now;
