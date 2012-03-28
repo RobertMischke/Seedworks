@@ -5,7 +5,7 @@ using Seedworks.Lib.Persistence;
 
 namespace Seedworks.Lib.Settings
 {
-    internal class SettingRepository : RepositoryDb<Setting>, ISettingRepository 
+    public class SettingRepository : RepositoryDb<Setting>, ISettingRepository 
     {
         public SettingRepository(ISession session) : base(session)
         {
