@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Seedworks.Persistence</id>
-    <version>0.8.2.14</version>
+    <version>0.8.2.15</version>
     <authors>Robert Mischke</authors>
     <owners>Robert Mischke</owners>
     <projectUrl>https://github.com/RobertMischke/Seedworks</projectUrl>
@@ -10,7 +10,7 @@
     <description>A generic Repository for NHibernate</description>
     <tags>NHibernate generic repository.</tags>
 	<dependencies>
-		<dependency id="FluentNHibernate" version="1.3.0.717" />
+		<dependency id="FluentNHibernate" version="1.3.0.733" />
 	</dependencies>
   </metadata>
 </package>
