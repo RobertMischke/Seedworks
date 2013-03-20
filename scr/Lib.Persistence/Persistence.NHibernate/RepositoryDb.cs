@@ -18,6 +18,10 @@ namespace Seedworks.Lib.Persistence
 		protected event EventHandler<RepositoryDbEventArgs> OnItemDeleted;
 		protected event EventHandler<RepositoryDbEventArgs> OnItemUpdated;
 
+        public IQueryOver<TDomainObject,TDomainObject> Query { get { return _session.QueryOver<TDomainObject>(); }}
+
+        public ISession Session { get { return _session; } }
+
         /// <summary>
         /// Occurs after a TDomainObject is retrieved from DB
         /// </summary>
