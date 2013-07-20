@@ -18,3 +18,4 @@ nuget/Seedworks.Web.State/lib/*.dll
 nuget/Seedworks.Web.State/lib/*.pdb
 nuget/Seedworks.Settings/lib/*.dll
 nuget/Seedworks.Settings/lib/*.pdb
+scr/packages
