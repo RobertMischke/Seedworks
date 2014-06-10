@@ -24,6 +24,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -83,6 +84,7 @@
     <Compile Include="Infrastructure\BaseTestSetting.cs" />
     <Compile Include="Lib.Persistance\EntityFilterTestsEntitites.cs" />
     <Compile Include="Lib.Persistance\RepositoryGetBySingleTestsEntitites.cs" />
+    <Compile Include="Lib.Persistance\RepositoryOrderBy.cs" />
     <Compile Include="Lib.Persistance\Sample\Entity.BaseTypeEntity\SampleEntityBaseEntity.cs" />
     <Compile Include="Lib.Persistance\Sample\Entity.BaseTypeEntity\SampleEntityBaseEntityMap.cs" />
     <Compile Include="Lib.Persistance\Sample\Entity.BaseTypeEntity\SampleEntityBaseEntityRepository.cs" />

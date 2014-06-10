@@ -231,7 +231,6 @@ namespace Seedworks.Lib.Persistence
 			return GetBy(searchSpec, null);
 		}
 
-
 		/// <param name="searchSpec"></param>
 		/// <param name="criteriaExtender">Here you can plug in additional changes of the criteria.</param>
 		/// <returns></returns>

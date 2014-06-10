@@ -45,10 +45,11 @@ namespace Seedworks.Lib.Persistence
     		IsAdding = false;
     	}
 
-		public void Add(OrderBy orderBy)
+        public OrderByCriteria Add(OrderBy orderBy)
 		{
 			CurrentList.RemoveAll(order => order.PropertyName == orderBy.PropertyName);
 			CurrentList.Add(orderBy);
+            return this;
 		}
 
     	public bool IsSet()

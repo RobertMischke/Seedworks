@@ -6,7 +6,7 @@ using Seedworks.Lib.Persistence;
 
 namespace Seedworks.Tests.Lib.Persistence
 {
-    public class SampleEntitySearchSpec : SearchSpecificationBase<SampleEntityFilter, OrderByCriteria>
+    public class SampleEntitySearchSpec : SearchSpecificationBase<SampleEntityFilter, SampleOrderBy>
     {
     }
 
@@ -26,6 +26,9 @@ namespace Seedworks.Tests.Lib.Persistence
 
     public class SampleOrderBy : OrderByCriteria
     {
+        public OrderBy Name;
+        public OrderBy Text;
+
         public OrderBy Created;
         public OrderBy Modified;
 
@@ -33,6 +36,9 @@ namespace Seedworks.Tests.Lib.Persistence
         {
             Created = new OrderBy("DateCreated", this);
             Modified = new OrderBy("DateModified", this);
+
+            Name = new OrderBy("Name", this);
+            Text = new OrderBy("Text", this);
         }        
     }
 

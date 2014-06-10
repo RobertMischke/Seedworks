@@ -10,6 +10,7 @@ namespace Seedworks.Tests.Lib.Persistence
     {
         public virtual int Id { get; set; }
         public virtual string Name { get; set; }
+        public virtual string Text { get; set; }
 
         public virtual DateTime DateCreated { get; set; }
         public virtual DateTime DateModified { get; set; }

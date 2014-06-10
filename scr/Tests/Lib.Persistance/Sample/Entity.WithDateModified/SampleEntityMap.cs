@@ -13,6 +13,7 @@ namespace Seedworks.Tests.Lib.Persistence
         {
             Id(x => x.Id);
             Map(x => x.Name);
+            Map(x => x.Text);
             Map(x => x.DateCreated);
             Map(x => x.DateModified);
         }

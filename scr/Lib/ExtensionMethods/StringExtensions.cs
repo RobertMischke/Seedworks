@@ -64,6 +64,9 @@ namespace Seedworks.Lib
         /// <returns></returns>
         public static List<string> WordWrap(this string text, int maxLineLength)
         {
+            if (String.IsNullOrEmpty(text))
+                return new List<string>();
+
             text = text.Replace(Environment.NewLine, "\n");
 
             var lines = text.Split('\n').ToList();
